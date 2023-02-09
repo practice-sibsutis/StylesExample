@@ -1,0 +1,24 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ResourcesExample.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:sys="using:System"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ResourcesExample.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="ResourcesExample">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<Window.Resources>
+		<sys:Double x:Key="RectangleWidth">100</sys:Double>
+		<sys:Double x:Key="RectangleHeight">100</sys:Double>
+		<!--SolidColorBrush x:Key="RectangleFill" Color="Chocolate"/-->
+	</Window.Resources>
+	<Rectangle Name="myRectangle" Fill="{DynamicResource RectangleFill}"
+			   Width="{DynamicResource RectangleWidth}" Height="{DynamicResource RectangleHeight}"/>
+
+</Window>

@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:StyleClassesExample.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="StyleClassesExample.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="StyleClassesExample">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<StackPanel>
+		<StackPanel.Styles>
+			<Style Selector="Button.blue">
+				<Setter Property="Background" Value="BurlyWood"/>
+			</Style>
+		</StackPanel.Styles>
+		<CheckBox Name="cbStyle" IsChecked="false" Content="Is style on?"/>
+		<Button Content="Button" Classes.blue="{Binding #cbStyle.IsChecked}"/>
+
+	</StackPanel>
+
+</Window>

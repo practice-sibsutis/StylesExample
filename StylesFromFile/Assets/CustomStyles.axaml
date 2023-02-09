@@ -1,0 +1,14 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+			<TextBox Text="Hello"/>
+        </Border>
+    </Design.PreviewWith>
+	<Style Selector="TextBox">
+		<Setter Property="Background" Value="AliceBlue"/>
+		<Setter Property="Foreground" Value="Chocolate"/>
+		<Setter Property="FontSize" Value="24"/>
+	</Style>
+</Styles>
